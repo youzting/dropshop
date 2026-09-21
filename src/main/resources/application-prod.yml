@@ -22,7 +22,7 @@ spring:
   data:
     redis:
       ssl:
-        enabled: true
+        enabled: ${REDIS_USE_SSL:true}
 
 logging:
   level:

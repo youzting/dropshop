@@ -1,0 +1,21 @@
+# Personal demo only: existing Flyway migrations do not contain a full baseline.
+# Hibernate update bootstraps the empty demo DB; do not use for real customer data.
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: update
+  flyway:
+    enabled: false
+  sql:
+    init:
+      mode: always
+      schema-locations: classpath:db/personal/shedlock.sql
+  datasource:
+    hikari:
+      maximum-pool-size: 5
+      minimum-idle: 1
+server:
+  tomcat:
+    threads:
+      max: 30
+      min-spare: 3

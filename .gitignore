@@ -50,6 +50,8 @@ src/main/resources/schema.sql
 application.yml
 application-local.yml
 # Local / secret yaml files
+.env
+.env.prod
 /secret.yml
 /application-local.yml
 /src/main/resources/secret.yml
